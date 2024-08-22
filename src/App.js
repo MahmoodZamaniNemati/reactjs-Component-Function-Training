@@ -2,24 +2,24 @@ import logo from './logo.svg';
 import './App.css';
 
 function App() {
+  const name = "mahmoud"
+  const age = "26"
+  const sex = "male"
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
-  );
+  <div className="App">
+    <Job salary={13000000} position="Wordpress Developer" company="EnetCalbe" />
+    <Job salary={14000000} position="Wordpress Developer" company="KhoshStyle" />
+    <Job salary={15000000} position="Wordpress Developer" company="Didnegar" />
+  </div>
+  )
 }
-
+const Job = (props) => {
+  return(
+    <div>
+      <h1>{props.company}</h1>
+      <h2>{props.position}</h2>
+      <h2>{props.salary}</h2>
+    </div>
+  )
+}
 export default App;
